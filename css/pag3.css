@@ -1,0 +1,8 @@
+label, input {
+    display: grid;
+}
+
+input#enviar {
+    margin-top: 15px;
+}
+
