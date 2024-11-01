@@ -1,55 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site</title>
-    <link rel="stylesheet" href="css/index.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Matriz de Eisenhower</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Página 1</h1>
-    </header>
-    <nav>
-        <h2>Link para outras páginas:</h2>
-        <ul>
-            <li><a href="html/pags/pag2.html">Página 2</a></li>
-            <li><a href="html/pags/pag3.html">Página 3</a></li>
-        </ul>
-    </nav>
-    <main>
-        <h3>Conteudo principal</h3>
-        <table>
-            <thead>
-                <tr>
-                    <th>No.</th>
-                    <th>Nome</th>
-                    <th>CPF</th>
-                    <th>Ação</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>João</td>
-                    <td>123</td>
-                    <td><a href="html/pags/pag2.html">Editar</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Maria</td>
-                    <td>234</td>
-                    <td><a href="html/pags/pag2.html">Editar</td>
-                </tr>
-                <tr></tr>
-            </tbody>
-        </table>
-    </main>
-    <aside>
-        <h4>Barra Lateral</h4>
-    </aside>
-    <footer>
-        <h5>Rodapé</h5>
-    </footer>
+
+<h1>Matriz de Eisenhower</h1>
+<div class="matrix">
+  <div class="box" id="important-urgent">
+    <h2>Importante e Urgente</h2>
+    <ul></ul>
+  </div>
+  <div class="box" id="important-not-urgent">
+    <h2>Importante e Não Urgente</h2>
+    <ul></ul>
+  </div>
+  <div class="box" id="not-important-urgent">
+    <h2>Não Importante mas Urgente</h2>
+    <ul></ul>
+  </div>
+  <div class="box" id="not-important-not-urgent">
+    <h2>Não Importante e Não Urgente</h2>
+    <ul></ul>
+  </div>
+</div>
+
+<div class="task-input">
+  <input type="text" id="task" placeholder="Escreva a atividade...">
+  <div class="dropdown">
+    <button onclick="toggleDropdown()">&#9650;</button>
+    <div class="dropdown-content">
+      <div onclick="addTask('important-urgent')">Importante e Urgente</div>
+      <div onclick="addTask('important-not-urgent')">Importante e Não Urgente</div>
+      <div onclick="addTask('not-important-urgent')">Não Importante mas Urgente</div>
+      <div onclick="addTask('not-important-not-urgent')">Não Importante e Não Urgente</div>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
